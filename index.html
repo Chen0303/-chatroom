@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        
+        <div class="leftSide">
+            <!-- header -->
+            <div class="header">
+                <div class="userimg">
+                    <img src="user.jpg" class="cover">
+                </div> 
+                <ul class="nav_icons">
+                    <li><ion-icon name="chatbox"></ion-icon></li>
+                    <li><ion-icon name="ellipsis-vertical-outline"></ion-icon></li>
+                </ul>
+            </div>
+            <!-- chatlist -->
+            <div class="chatlst">
+                <!-- <div class="block"></div> -->
+            </div>
+        </div>
+        <div class="rightSide">
+            <div class="header">
+                <div class="imgText">
+                    
+                    <div class="userimg">
+                        <img src="user.jpg" class="cover">
+                        
+                    </div>
+                    <h4>周杰倫<br><span>線上</span></h4>
+                </div>
+                <ul class="nav_icons">
+                    <img src="moon.png" id="icon">
+                </ul>
+            </div>
+        <!-- chatbox -->
+            <div class="chatbox"></div>
+        <!-- chat input -->
+            <div class="chatbox_input">
+                <ion-icon name="happy-outline"></ion-icon>
+                <ion-icon name="attach-outline"></ion-icon>
+                <input type="text" placeholder="輸入訊息">
+                <ion-icon name="mic"></ion-icon>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // light transform dark
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")){
+                icon.src = "sun.png";
+            }
+            else{
+                icon.src ="moon.png";
+            }
+        }
+
+    </script>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
